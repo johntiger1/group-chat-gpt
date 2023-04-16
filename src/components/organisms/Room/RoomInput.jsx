@@ -12,6 +12,7 @@ const RoomInput = ({ db, roomId, user }) => {
     setMessage(message + emoji.native);
   };
 
+  // most likely, here is where we would handle the openAI API call
   const createMessage = () => {
     db.collection("rooms")
       .doc(roomId)
@@ -34,10 +35,25 @@ const RoomInput = ({ db, roomId, user }) => {
       .catch((err) => console.error("Error writing document: ", err));
   };
 
+  const chatbot_handle = () => {
+      console.log('hello')
+      const  temp_var = 'qhwijei';
+      db.collection("rooms")
+          .doc(roomId)
+          .collection("messages")
+          .add({
+              message: 'i am groupchatgpt',
+              name: 'chatbot',
+              uid: user.uid,
+              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+          }).catch((err) => console.error("Error writing chatbot: ", err));
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     createMessage();
     updateTime();
+    chatbot_handle();
 
     setMessage("");
   };
