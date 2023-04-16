@@ -17,9 +17,9 @@ export default function Footer() {
         <Link
           underline="none"
           color="secondary"
-          href="https://samx23.github.io"
+          href="johntiger1.github.io"
         >
-          Sami Kalammallah
+          John Chen
         </Link>{" "}
         © {new Date().getFullYear()}
       </Typography>
