@@ -41,6 +41,12 @@ $ pnpm start
 - rather, we need to ship the app somewhere (host it) as well as expose a client too
 - recall separating a client/server app !  
 
+
+### Architecture
+- nodeJS server app 
+- displays and serves the client app as well
+
+
 ### Contribution
 
 I will receive any PR (Pull Request) from anyone! Please read the CONTRIBUTING.md for more information.
