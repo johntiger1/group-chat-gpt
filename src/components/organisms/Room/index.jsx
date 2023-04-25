@@ -54,6 +54,8 @@ export default function Room() {
         setLoaded(true);
      } catch (err) {
        console.log(err.message);
+       setGPTMessage('errorGPTMessage');
+        setLoaded(true);
      }
   }
 
